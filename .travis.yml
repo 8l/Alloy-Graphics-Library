@@ -1,0 +1,42 @@
+language: cpp
+sudo: true
+dist: trusty
+addons:
+
+  apt:
+    sources:
+      - deadsnakes
+    packages:
+      - g++-4.8
+      - gcc-4.8
+      - libglu1-mesa-dev
+      - libxxf86vm-dev 
+      - libxrandr-dev
+      - libxcursor-dev
+      - libxinerama-dev
+      - libxdamage-dev
+      - libxi-dev
+      - libglew-dev
+      - libxi6
+      - libglew1.10
+matrix:
+  include:
+    - os: linux
+      compiler: gcc-4.8
+      before_install:
+        - sudo add-apt-repository -y ppa:george-edison55/cmake-3.x
+        - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+        - sudo apt-get update
+      script:
+        - cmake -G "Unix Makefiles" -DCMAKE_CXX_COMPILER=g++-4.8 -DCMAKE_C_COMPILER=gcc-4.8
+        - make -j2
+    - os: osx
+      before_install:
+        - brew update
+        - brew install glew
+        - brew tap homebrew/versions
+        - brew install --static glfw3
+      compiler: clang
+      script:
+        - cmake -G "Unix Makefiles" -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
+        - make -j2
