@@ -85,21 +85,6 @@ make -j4
 ## License
 Alloy is [BSD licensed](https://github.com/bclucas/Alloy-Graphics-Library/edit/master/LICENSE) and only uses libraries that also have a permissive license for commercial and academic use.
 
-## Future Work
-- Active contour segmentation
-- Iso-surface
-- Image processing for anisotropic image diffusion, Mumford-Shah, Rudin-Osher-Fatemi, Chan-Esedolgu-Nikolova
-- Automatic UV generation (OpenNL)
-- 2D fluids (Stam's stable fluid simulator)
-- Progressive Meshes
-- Gradient Vector Flow
-- KAZE features
-- DAISY features
-- SLIC super pixels 
-- Spring Level Sets
-- 2D physics (box2D)
-
-
 Absolute/Relative Positioning Example
 -------------------------
 [![UnitsEx](https://github.com/bclucas/blob/blob/master/screenshots/screenshot0000.png)](https://github.com/bclucas/Alloy-Graphics-Library/blob/master/src/example/UnitsEx.cpp)
