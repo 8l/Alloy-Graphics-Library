@@ -83,7 +83,7 @@ make -j4
  - Change build configuration to Release|x64 for best performance 
 
 ## License
-Alloy is [BSD licensed](https://github.com/bclucas/Alloy-Graphics-Library/edit/master/LICENSE) and only uses libraries that also have a permissive license for commercial and academic use.
+Alloy is [MIT licensed](https://github.com/bclucas/Alloy-Graphics-Library/edit/master/LICENSE) and only uses libraries that also have a permissive license for commercial and academic use.
 
 Absolute/Relative Positioning Example
 -------------------------
