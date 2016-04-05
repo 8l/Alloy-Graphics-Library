@@ -18,6 +18,11 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 * THE SOFTWARE.
 */
+
+//Based on avoidance routing algorithm in Java Image Science Toolkit.
+//Originally written by Blake Lucas at Johns Hopkins University.
+//https://www.nitrc.org/plugins/scmcvs/cvsweb.php/JIST/src/edu/jhu/ece/iacl/jist/pipeline/graph/AvoidanceRouting.java?rev=1.5;content-type=text%2Fx-cvsweb-markup;cvsroot=jist
+
 #ifndef INCLUDE_AVOIDANCEROUTING_H_
 #define INCLUDE_AVOIDANCEROUTING_H_
 #include "AlloyMath.h"
