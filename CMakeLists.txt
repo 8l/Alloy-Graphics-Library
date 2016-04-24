@@ -1,7 +1,8 @@
 cmake_minimum_required (VERSION 2.8.3)
 
 project("Alloy")
-
+set(INSTALL_LIB_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE PATH "Installation directory for libraries")
+set(INSTALL_INC_DIR "${CMAKE_INSTALL_PREFIX}/include" CACHE PATH "Installation directory for headers")
 if(NOT IS_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/ext/glfw/src")
   message(FATAL_ERROR "The Alloy dependency repositories (GLFW, etc.) are missing! "
     "You probably did not clone the project with --recursive. It is possible to recover "
@@ -100,6 +101,15 @@ file(GLOB ex_files src/example/*.cpp)
 file(GLOB ex_includes include/example/*.h)
 add_library(alloy STATIC ${lib_includes} ${lib_files} ${LIBALLOY_EXTRA_SOURCE})
 
+INSTALL ( FILES 
+  ${lib_includes}
+  DESTINATION
+  "${INSTALL_INC_DIR}"
+)
+INSTALL ( TARGETS alloy 
+  DESTINATION
+  "${INSTALL_LIB_DIR}"
+)
 if(ALLOY_BUILD_EXAMPLE)
   add_executable(examples ${ex_includes} ${ex_files})
   include_directories(include/core)
