@@ -77,9 +77,9 @@ namespace aly {
 			}
 			// March around contour
 			if (e1.get() != nullptr) {
-				if (!firstPass) {
+				//if (!firstPass) {
 					lastSplit->e1.reset();
-				}
+				//}
 				if (e1->x == lastSplit->vid) {
 					lastSplit = pts[e1->y];
 				}
@@ -97,9 +97,9 @@ namespace aly {
 				firstPass = false;
 			}
 			else if (e2.get() != nullptr) {
-				if (!firstPass) {
+				//if (!firstPass) {
 					lastSplit->e2.reset();
-				}
+				//}
 				firstPass = false;
 				if (e2->x == lastSplit->vid) {
 					lastSplit = pts[e2->y];
